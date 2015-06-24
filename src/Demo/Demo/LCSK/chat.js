@@ -148,6 +148,13 @@ var LCSKChat = function () {
             var y = 301 + elm.height();
             $('#chat-box').addClass('chat-open');
             elm.css('bottom', y);
+            //when the chat client opens the chat box
+            //set the focus to the text area, this
+            //avoids having to mouse over to it and click it.
+            var $el = $("#chat-box");
+            setTimeout(function () {
+                $el.find('textarea').focus();
+            }, 0);
         }
         $('#chat-box').slideToggle();
     }
