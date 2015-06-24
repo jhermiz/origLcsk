@@ -168,6 +168,14 @@
     <script src="assets/js/jquery.signalR-2.1.1.min.js" type="text/javascript"></script>
     <script src="/signalr/hubs" type="text/javascript"></script>
     <script src="agent.js" type="text/javascript"></script>
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //upon enter by an agent allow logging in.
+            $('#login-pass').keypress(function (e) {
+                if (e.keyCode == 13)
+                    $('#login-btn').click();
+            });
+        });
+    </script>
 </body>
 </html>
